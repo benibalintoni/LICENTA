@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "808901478128",
+    "firebase_url": "https://uptfirebaseproject.firebaseio.com",
+    "project_id": "uptfirebaseproject",
+    "storage_bucket": "uptfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808901478128:android:953116500247db85",
+        "android_client_info": {
+          "package_name": "com.example.upt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808901478128-dj53hgmrgt9inlrmg0396socrnk68u4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.upt",
+            "certificate_hash": "1a7982ec72608c789c032de3dfdf5b26c2936e68"
+          }
+        },
+        {
+          "client_id": "808901478128-3tnhdaebgagf6jo2ledsufgauhj5sv7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBomrlyie_XgKI3Qbp1blHrgRQ8uteXMmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808901478128-3tnhdaebgagf6jo2ledsufgauhj5sv7g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

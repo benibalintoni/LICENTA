@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UPT</string>
+
+    <string name="facebook_application_id">875193149482328</string>
+    <string name="facebook_login_protocol_scheme">fb875193149482328</string>
+</resources>
