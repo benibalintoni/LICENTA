@@ -9,7 +9,8 @@
     </style>
 
     <style name="MyTheme" parent="AppTheme">
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">@drawable/upt</item>
     </style>
+
 
 </resources>
