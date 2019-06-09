@@ -9,7 +9,7 @@
     </style>
 
     <style name="MyTheme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/upt</item>
+        <item name="android:windowBackground">@drawable/log_in</item>
     </style>
 
 

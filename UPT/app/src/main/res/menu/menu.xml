@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item1" android:title="Site-ul oficial UPT" android:icon="@color/fui_bgTwitter"/>
+    <item android:id="@+id/item2" android:title="Automatica si calculatoare" android:icon="@color/fui_bgTwitter"/>
+    <item android:id="@+id/item3" android:title="Informatii admitere AC" android:icon="@color/fui_bgTwitter"/>
+    <item android:id="@+id/item4" android:title="Sign Out" android:visible="true" android:icon="@color/fui_bgTwitter"/>
+
+
+</menu>
