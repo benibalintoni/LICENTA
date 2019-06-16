@@ -32,7 +32,6 @@ val db = FirebaseFirestore.getInstance()
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
-
     private var myRequestCode: Int = 1111
     private lateinit var providers : List<AuthUI.IdpConfig>
     private var numberInQueue = 0
@@ -87,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                 .setSmallIcon(R.drawable.my_great_logo)
                 .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.logo))
                 .setContentIntent(pendingIntent)
-            }
+        }
         else{
             builder = Notification.Builder(this)
                 .setContentTitle("Este Randul Tau!")
@@ -99,9 +98,9 @@ class MainActivity : AppCompatActivity() {
         notificationManager.notify(1234, builder.build())
     }
 
-
     private fun listenToDiffs() {
         super.onStart()
+
         db.collection("users")
             .addSnapshotListener { snapshots, e ->
                 if (e != null) {
@@ -129,6 +128,7 @@ class MainActivity : AppCompatActivity() {
                                         if(persInQueue <= 0) {
                                             textInAateptare.text = "0"
                                             notifyQueue("Te rugam sa te prezinti in laboratorul $lineNumber")
+                                            text_turn.visibility = View.VISIBLE
                                         }
                                         else textInAateptare.text = persInQueue.toString()
                                         textInAateptare.text = persInQueue.toString()
@@ -212,7 +212,7 @@ class MainActivity : AppCompatActivity() {
                                 startActivity(intent)
                             }
                         }
-                        }
+                    }
                 btn_queue.isEnabled = true
             }
             else
@@ -282,7 +282,7 @@ class MainActivity : AppCompatActivity() {
                         db.collection("users").document(userData.uid)
                             .set(user)
                             .addOnSuccessListener {
-                                Log.d(TAG, "AAAAAAAAAA DocumentSnapshot successfully written!")
+                                Log.d(TAG, "DocumentSnapshot successfully written!")
 
                                 db.collection("Numbers").document("CurrentNumbers").update("currentNumber", numberInQueue)
                             }
@@ -292,6 +292,7 @@ class MainActivity : AppCompatActivity() {
                         if(persInQueue <= 0){
                             notifyQueue("Te rugam sa te prezinti in laboratorul $lineNumber")
                             textInAateptare.text = "0"
+                            text_turn.visibility = View.VISIBLE
                         }
                         else textInAateptare.text = persInQueue.toString()
                         textNumarRand.text = inQueue.toString()
@@ -326,6 +327,7 @@ class MainActivity : AppCompatActivity() {
            textNumarCoada.visibility = View.INVISIBLE
            textInAateptare.visibility = View.INVISIBLE
            textPers.visibility = View.INVISIBLE
+           text_turn.visibility = View.INVISIBLE
        }
     }
 
@@ -351,6 +353,7 @@ class MainActivity : AppCompatActivity() {
                             if(persInQueue <= 0) {
                                 notifyQueue("Te rugam sa te prezinti in laboratorul $lineNumber")
                                 textInAateptare.text = "0"
+                                text_turn.visibility = View.VISIBLE
                             }
                             else textInAateptare.text = persInQueue.toString()
                             textNumarRand.text = inQueue.toString()
